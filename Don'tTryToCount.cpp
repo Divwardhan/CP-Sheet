@@ -25,23 +25,19 @@ int main() {
         cin >> n >> m;
         string x, s;
         cin >> x >> s;
-
-        int u = ceil(log(m)/ log(n));
-        int i = u -1;
         bool found = false;
-
-        while(i < u+2 || i<=2){
-            if(i<0){
-                i++;
-                continue;
+        for (int i = 0; i <= 5; i++)
+        {
+            if(x.find(s) != string :: npos){
+                cout<<i<<endl;
+                found = true;
+                break;
             }
-            operation(x, i);
-            if(findSubstring(x , s)) break;
-            i++;
+            x.append(x);
         }
 
-        if(i>u+2) cout<<-1<<endl;
-        else cout<<i<<endl;
+        if(!found)cout<<-1<<endl;
+        
         
     }
 }
