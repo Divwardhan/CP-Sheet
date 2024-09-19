@@ -14,7 +14,7 @@ int main() {
       cin >> x;
       occ[x]++;
     }
-    if (occ.size() >= 3) cout<<"No"<<endl;;
+    if (occ.size() >= 3) cout<<"No"<<endl;
     else {
       if (abs(occ.begin()->second - occ.rbegin()->second) <= 1) {
         cout<<("Yes")<<endl;
